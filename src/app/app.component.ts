@@ -1,10 +1,23 @@
 import { Component } from '@angular/core';
+import { Product } from './product.model';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'inventory-app-root',
+  templateUrl: './app.component.html'
 })
 export class AppComponent {
-  title = 'app';
+  products: Product[];
+  constructor() {
+    this.products = [
+      new Product('sku12345', 'hat', 
+    '/assets/images/productes/black-hat.jpg',
+    ['Men', 'Accessories', 'Hats'], 29.99),
+    new Product('sku12345', 'hat', 
+    '/assets/images/productes/black-hat.jpg',
+    ['Men', 'Accessories', 'Hats'], 29.99),
+    new Product('sku12345', 'hat', 
+    '/assets/images/productes/black-hat.jpg',
+    ['Men', 'Accessories', 'Hats'], 29.99)
+  ]
+  }
 }
